@@ -17,6 +17,8 @@ protocol HomeViewProtocol: AnyObject {
 protocol HomeViewDelegate: AnyObject {
     func didUpdateMovieWishList(wishStatus: WishListStatus, movieType: MovieType, id: Int)
     func didTapMovie(movieID: Int, movieType: MovieType)
+    func didTapWtachTrailer(movieType: MovieType, id: Int)
+    func didTapWatchNow(movieType: MovieType, id: Int)
 }
 
 class HomeViewController: BaseViewController {
@@ -112,6 +114,14 @@ extension HomeViewController: HomeViewProtocol {
 }
 
 extension HomeViewController: HomeViewDelegate {
+    func didTapWtachTrailer(movieType: MovieType, id: Int) {
+        
+    }
+    
+    func didTapWatchNow(movieType: MovieType, id: Int) {
+        
+    }
+    
     func didUpdateMovieWishList(wishStatus: WishListStatus, movieType: MovieType, id: Int) {
         dataUpdateService?.updateMovie(movieStatus: wishStatus, movieID: id, movieType: movieType, completion: { updateStaus in
             switch updateStaus {
@@ -125,7 +135,7 @@ extension HomeViewController: HomeViewDelegate {
     }
     
     func didTapMovie(movieID: Int, movieType: MovieType) {
-        let vc = DetailViewController()
+        let vc = DetailRouter.createModule(id: movieID, movieType: movieType)
         self.navigationController?.pushViewController(vc, animated: true)
     }
 }

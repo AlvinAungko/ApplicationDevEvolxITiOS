@@ -10,15 +10,19 @@ import UIKit
 class MovieSliderContainerTableViewCell: BaseTableViewCell<[PopularMovieModel]> {
     
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var pageControl: UIPageControl!
     var delegate: HomeViewDelegate?
     
     override func setupUIs() {
         super.setupUIs()
         setUpCollectionView()
+        pageControl.tintColor = .placeholderText
+        pageControl.currentPageIndicatorTintColor = .purple
     }
     
     override func bindData(_ item: [PopularMovieModel]) {
         super.bindData(item)
+        pageControl.numberOfPages = item.count
         collectionView.reloadData()
     }
     
@@ -51,6 +55,8 @@ extension MovieSliderContainerTableViewCell: UICollectionViewDataSource, UIColle
         }
         cell.item = self.item?[indexPath.row]
         cell.handleOnTapWishList { self.delegate?.didUpdateMovieWishList(wishStatus: $2, movieType: $0, id: $1) }
+        cell.handleDidTapTrailer { self.delegate?.didTapWtachTrailer(movieType: $0, id: $1) }
+        cell.handleDidTapWatchNow { self.delegate?.didTapWatchNow(movieType: $0, id: $1) }
         return cell
     }
     
@@ -62,5 +68,12 @@ extension MovieSliderContainerTableViewCell: UICollectionViewDataSource, UIColle
         let width = collectionView.frame.width - 12
         let height = collectionView.frame.height
         return CGSize(width: width, height: height)
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let offSet = scrollView.contentOffset.x
+        let width = scrollView.frame.width
+        let horizontalCenter = width / 2
+        pageControl.currentPage = Int(offSet + horizontalCenter) / Int(width)
     }
 }

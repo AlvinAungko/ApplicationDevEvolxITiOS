@@ -52,7 +52,7 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
                    estimatedHeightForHeaderInSection section: Int) -> CGFloat {
         switch self.listOfSections[section] {
         case .popularSection:
-            return 0
+            return 50.0
         case .upcomingSection:
             return 50.0
         }

@@ -23,17 +23,17 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N5I-q8-qbH">
                                 <rect key="frame" x="0.0" y="0.0" width="290" height="199"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Default" translatesAutoresizingMaskIntoConstraints="NO" id="BdE-mN-d4e">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Default" translatesAutoresizingMaskIntoConstraints="NO" id="BdE-mN-d4e">
                                         <rect key="frame" x="0.0" y="0.0" width="290" height="199"/>
                                     </imageView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ivj-du-ncU">
-                                        <rect key="frame" x="0.0" y="0.0" width="71.333333333333329" height="50.333333333333336"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="64.333333333333329" height="50.333333333333336"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="DA8-oP-s5T">
-                                                <rect key="frame" x="15.000000000000004" y="14.999999999999998" width="41.333333333333343" height="20.333333333333329"/>
+                                                <rect key="frame" x="15.000000000000004" y="14.999999999999998" width="34.333333333333343" height="20.333333333333329"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zef-oz-bV6">
-                                                        <rect key="frame" x="0.0" y="0.0" width="41.333333333333336" height="20.333333333333332"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zef-oz-bV6">
+                                                        <rect key="frame" x="0.0" y="0.0" width="34.333333333333336" height="20.333333333333332"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <color key="textColor" systemColor="systemBackgroundColor"/>
                                                         <nil key="highlightedColor"/>
@@ -55,7 +55,7 @@
                                             <constraint firstAttribute="height" constant="50" id="Qdy-BG-IVm"/>
                                             <constraint firstAttribute="width" constant="50" id="ZMp-o1-THq"/>
                                         </constraints>
-                                        <color key="tintColor" systemColor="systemBackgroundColor"/>
+                                        <color key="tintColor" systemColor="labelColor"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" image="bookmark" catalog="system"/>
                                     </button>
@@ -117,6 +117,8 @@
             <size key="customSize" width="310" height="219"/>
             <connections>
                 <outlet property="movieImage" destination="BdE-mN-d4e" id="3ii-r2-Vo1"/>
+                <outlet property="playTrailerButton" destination="1B2-Od-yt4" id="2su-Oq-ohF"/>
+                <outlet property="watchNowButton" destination="H10-Df-UC5" id="CO7-v0-nE5"/>
                 <outlet property="wishListButton" destination="WGn-Zz-2yU" id="5IA-n2-KKl"/>
             </connections>
             <point key="canvasLocation" x="164.61538461538461" y="80.687203791469187"/>
@@ -127,6 +129,9 @@
         <image name="bookmark" catalog="system" width="110" height="128"/>
         <image name="play.circle.fill" catalog="system" width="128" height="123"/>
         <image name="play.fill" catalog="system" width="117" height="128"/>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

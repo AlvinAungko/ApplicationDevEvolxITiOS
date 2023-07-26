@@ -7,14 +7,19 @@
 
 import UIKit
 
-class RatingInfoTableViewCell: BaseTableViewCell<Any> {
+class RatingInfoTableViewCell: BaseTableViewCell<MovieDetailRatingSection> {
 
+    @IBOutlet weak var numberOfRatesLabel: UILabel!
+    @IBOutlet weak var numberOfVotesLabel: UILabel!
+    
     override func setupUIs() {
         super.setupUIs()
     }
     
-    override func bindData(_ item: Any) {
+    override func bindData(_ item: MovieDetailRatingSection) {
         super.bindData(item)
+        numberOfRatesLabel.text = item.rating
+        numberOfVotesLabel.text = item.voteCount
     }
     
 }

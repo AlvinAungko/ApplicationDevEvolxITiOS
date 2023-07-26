@@ -134,6 +134,13 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="movieImage" destination="POO-i9-o7y" id="4kT-sd-Rko"/>
+                <outlet property="movieTitle" destination="IZP-jU-AmZ" id="r4e-oX-lhL"/>
+                <outlet property="playTrailerButton" destination="Ec6-Em-SyD" id="Qfp-aM-77s"/>
+                <outlet property="playWatchNowButton" destination="O9t-ht-gsO" id="X7v-Jh-4zz"/>
+                <outlet property="wishListButton" destination="3r5-iY-s5a" id="Zxz-rx-mEE"/>
+            </connections>
             <point key="canvasLocation" x="-73.84615384615384" y="167.77251184834122"/>
         </tableViewCell>
     </objects>

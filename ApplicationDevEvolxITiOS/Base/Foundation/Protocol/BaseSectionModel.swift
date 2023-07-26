@@ -7,12 +7,12 @@
 
 import Foundation
 
-protocol SectionItem {
-    func to<T: SectionItem>(_ type: T.Type) -> T?
+protocol DetailSectionItem {
+    func to<T: DetailSectionItem>(_ type: T.Type) -> T?
 }
 
-extension SectionItem {
-    func to<T: SectionItem>(_ type: T.Type) -> T? {
+extension DetailSectionItem {
+    func to<T: DetailSectionItem>(_ type: T.Type) -> T? {
         self as? T
     }
 }
