@@ -17,7 +17,7 @@ class VideoDisplayViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        playVideo(videoID: "")
+       debugPrint("Testing Git.")
     }
     
     override func setupUI() {
