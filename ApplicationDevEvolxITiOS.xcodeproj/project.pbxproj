@@ -41,6 +41,9 @@
 		E11161D82A712BA10092D04F /* DetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11161D72A712BA10092D04F /* DetailPresenter.swift */; };
 		E11161DA2A712BB30092D04F /* DetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11161D92A712BB30092D04F /* DetailRouter.swift */; };
 		E11161DC2A71363F0092D04F /* DetailView+Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11161DB2A71363F0092D04F /* DetailView+Delegate.swift */; };
+		E11161F52A716C160092D04F /* MovieTrailersNetworkConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11161F42A716C160092D04F /* MovieTrailersNetworkConfiguration.swift */; };
+		E11161F92A716F300092D04F /* VideoRoomRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11161F82A716F300092D04F /* VideoRoomRouter.swift */; };
+		E11161FD2A7173D50092D04F /* URLValidationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11161FC2A7173D50092D04F /* URLValidationService.swift */; };
 		E160B3E72A70DDA900B3DB81 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E160B3E62A70DDA900B3DB81 /* AppDelegate.swift */; };
 		E160B3F02A70DDAB00B3DB81 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E160B3EF2A70DDAB00B3DB81 /* Assets.xcassets */; };
 		E160B3F32A70DDAB00B3DB81 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E160B3F12A70DDAB00B3DB81 /* LaunchScreen.storyboard */; };
@@ -113,6 +116,9 @@
 		E11161D72A712BA10092D04F /* DetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPresenter.swift; sourceTree = "<group>"; };
 		E11161D92A712BB30092D04F /* DetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailRouter.swift; sourceTree = "<group>"; };
 		E11161DB2A71363F0092D04F /* DetailView+Delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DetailView+Delegate.swift"; sourceTree = "<group>"; };
+		E11161F42A716C160092D04F /* MovieTrailersNetworkConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTrailersNetworkConfiguration.swift; sourceTree = "<group>"; };
+		E11161F82A716F300092D04F /* VideoRoomRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoRoomRouter.swift; sourceTree = "<group>"; };
+		E11161FC2A7173D50092D04F /* URLValidationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLValidationService.swift; sourceTree = "<group>"; };
 		E160B3E32A70DDA900B3DB81 /* ApplicationDevEvolxITiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ApplicationDevEvolxITiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E160B3E62A70DDA900B3DB81 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E160B3EF2A70DDAB00B3DB81 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -249,6 +255,41 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		E11161F62A716EFE0092D04F /* VideoDisplay */ = {
+			isa = PBXGroup;
+			children = (
+				E11161FB2A7173C50092D04F /* URLValidationService */,
+				E11161FA2A716F390092D04F /* View */,
+				E11161F82A716F300092D04F /* VideoRoomRouter.swift */,
+			);
+			path = VideoDisplay;
+			sourceTree = "<group>";
+		};
+		E11161F72A716F070092D04F /* VideoRoom */ = {
+			isa = PBXGroup;
+			children = (
+				E11161F62A716EFE0092D04F /* VideoDisplay */,
+			);
+			path = VideoRoom;
+			sourceTree = "<group>";
+		};
+		E11161FA2A716F390092D04F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E161D3BD2A714CFB008B14D5 /* VideoDisplayViewController.swift */,
+				E161D3BE2A714CFB008B14D5 /* VideoDisplayViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E11161FB2A7173C50092D04F /* URLValidationService */ = {
+			isa = PBXGroup;
+			children = (
+				E11161FC2A7173D50092D04F /* URLValidationService.swift */,
+			);
+			path = URLValidationService;
+			sourceTree = "<group>";
+		};
 		E160B3DA2A70DDA800B3DB81 = {
 			isa = PBXGroup;
 			children = (
@@ -288,7 +329,7 @@
 		E160B3FA2A70E0AB00B3DB81 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
-				E161D3BC2A714CE7008B14D5 /* Video */,
+				E11161F72A716F070092D04F /* VideoRoom */,
 				E11161842A70F07D0092D04F /* Detail */,
 				E160B3FF2A70E0F800B3DB81 /* Home */,
 			);
@@ -318,6 +359,7 @@
 				E160B4272A70E5F400B3DB81 /* UpcomingMovieNetworkConfiguration.swift */,
 				E160B4332A70E69700B3DB81 /* PopularMovieNetworkConfiguration.swift */,
 				E160B4352A70E6B300B3DB81 /* MovieDetailNetworkConfiguration.swift */,
+				E11161F42A716C160092D04F /* MovieTrailersNetworkConfiguration.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -462,15 +504,6 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		E161D3BC2A714CE7008B14D5 /* Video */ = {
-			isa = PBXGroup;
-			children = (
-				E161D3BD2A714CFB008B14D5 /* VideoDisplayViewController.swift */,
-				E161D3BE2A714CFB008B14D5 /* VideoDisplayViewController.xib */,
-			);
-			path = Video;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -599,6 +632,8 @@
 				E11161C32A7121440092D04F /* WatchNowTableViewCell.swift in Sources */,
 				E160B40A2A70E19F00B3DB81 /* BaseCollectionViewCell.swift in Sources */,
 				E160B4082A70E18900B3DB81 /* BaseTableViewCell.swift in Sources */,
+				E11161F52A716C160092D04F /* MovieTrailersNetworkConfiguration.swift in Sources */,
+				E11161F92A716F300092D04F /* VideoRoomRouter.swift in Sources */,
 				E160B4432A70E8C800B3DB81 /* HomeModel.swift in Sources */,
 				E160B43C2A70E79000B3DB81 /* WishListStatus.swift in Sources */,
 				E160B4262A70E5A000B3DB81 /* DatabaseManager.swift in Sources */,
@@ -622,6 +657,7 @@
 				E160B40D2A70E21E00B3DB81 /* DialogController.swift in Sources */,
 				E160B41E2A70E51500B3DB81 /* Optionals+String.swift in Sources */,
 				E160B4302A70E64300B3DB81 /* StandardLogger.swift in Sources */,
+				E11161FD2A7173D50092D04F /* URLValidationService.swift in Sources */,
 				E11161A12A70F4C10092D04F /* BaseSectionModel.swift in Sources */,
 				E11161D62A712B980092D04F /* DetailWorker.swift in Sources */,
 				E160B42C2A70E62500B3DB81 /* StandardConfiguration.swift in Sources */,
