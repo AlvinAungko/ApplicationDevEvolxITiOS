@@ -1,0 +1,46 @@
+PODS:
+  - Alamofire (5.7.1)
+  - NVActivityIndicatorView (5.1.1):
+    - NVActivityIndicatorView/Base (= 5.1.1)
+  - NVActivityIndicatorView/Base (5.1.1)
+  - Realm (10.39.1):
+    - Realm/Headers (= 10.39.1)
+  - Realm/Headers (10.39.1)
+  - RealmSwift (10.39.1):
+    - Realm (= 10.39.1)
+  - SDWebImage/Core (5.15.8)
+  - SDWebImage/MapKit (5.15.8):
+    - SDWebImage/Core
+  - SVProgressHUD (2.2.5)
+  - SVPullToRefresh (0.4.1)
+
+DEPENDENCIES:
+  - Alamofire
+  - NVActivityIndicatorView
+  - RealmSwift (~> 10)
+  - SDWebImage/MapKit
+  - SVProgressHUD
+  - SVPullToRefresh
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - NVActivityIndicatorView
+    - Realm
+    - RealmSwift
+    - SDWebImage
+    - SVProgressHUD
+    - SVPullToRefresh
+
+SPEC CHECKSUMS:
+  Alamofire: 0123a34370cb170936ae79a8df46cc62b2edeb88
+  NVActivityIndicatorView: 1f6c5687f1171810aa27a3296814dc2d7dec3667
+  Realm: 1f3157edf145f4d9036765ab550c8cb18f62b700
+  RealmSwift: 8a69a1cb788cd5865966f49667b130567e07bceb
+  SDWebImage: cb032eba469c54e0000e78bcb0a13cdde0a52798
+  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
+  SVPullToRefresh: ba2e718695a43253d8bea6852d2960097dc15d8c
+
+PODFILE CHECKSUM: b5e6a1fa2219cfad97fb574600ea70aebdef2d43
+
+COCOAPODS: 1.12.0
