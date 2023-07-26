@@ -24,28 +24,28 @@ class CustomTabBarController: UITabBarController {
     private func generateTabBar() {
         viewControllers = [
             generateVC(
-                viewController: HomeViewController(),
+                viewController: HomeRouter.createModule(),
                 title: "Home",
                 image: UIImage(systemName: "house"),
                 selectedImage: UIImage(systemName: "house.fill")
             ),
             
             generateVC(
-                viewController: HomeViewController(),
+                viewController: UIViewController(),
                 title: "Search",
                 image: UIImage(systemName: "magnifyingglass"),
                 selectedImage: UIImage(systemName: "magnifyingglass")
             ),
             
             generateVC(
-                viewController: HomeViewController(),
+                viewController: UIViewController(),
                 title: "Wishlist",
                 image: UIImage(systemName: "bookmark"),
                 selectedImage: UIImage(systemName: "bookmark.fill")
             ),
             
             generateVC(
-                viewController: HomeViewController(),
+                viewController: UIViewController(),
                 title: "Profile",
                 image: UIImage(systemName: "person"),
                 selectedImage: UIImage(systemName: "person")

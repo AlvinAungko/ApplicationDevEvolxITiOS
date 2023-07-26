@@ -6,7 +6,7 @@
 //
 
 import Foundation
-import Realm
+import RealmSwift
 
 enum DBUpdateStatus {
     case failure
@@ -22,21 +22,21 @@ enum DBUpdateStatus {
 }
 
 class DataUpdateService {
-    let realmManager: RealmManager
-    init(realmManager: RealmManager) {
+    let realmManager: Realm
+    init(realmManager: Realm) {
         self.realmManager = realmManager
     }
     
     func updateMovie(movieStatus: WishListStatus, movieID: Int, movieType: MovieType, completion: @escaping(DBUpdateStatus) -> Void) {
         switch movieType {
         case .upcoming:
-            if let movie = realmManager.realm().object(ofType: UpcomingMovieModel.self, forPrimaryKey: movieID) {
-                do { try realmManager.realm().write { movie.movieStatus = movieStatus }; completion(.success) }
+            if let movie = realmManager.object(ofType: UpcomingMovieModel.self, forPrimaryKey: movieID) {
+                do { try realmManager.write { movie.movieStatus = movieStatus }; completion(.success) }
                 catch {completion(.failure)}
             }
         case .popular:
-            if let movie = realmManager.realm().object(ofType: PopularMovieModel.self, forPrimaryKey: movieID) {
-                do { try realmManager.realm().write { movie.movieStatus = movieStatus }; completion(.success) }
+            if let movie = realmManager.object(ofType: PopularMovieModel.self, forPrimaryKey: movieID) {
+                do { try realmManager.write { movie.movieStatus = movieStatus }; completion(.success) }
                 catch {completion(.failure)}
             }
         }

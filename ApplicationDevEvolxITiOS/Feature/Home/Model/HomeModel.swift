@@ -8,6 +8,20 @@
 import Foundation
 import RealmSwift
 
+enum HomePageSections {
+    case popularSection
+    case upcomingSection
+    
+    var sectionTitle: String {
+        switch self {
+        case .popularSection:
+            return "Popular"
+        case .upcomingSection:
+            return "Upcoming"
+        }
+    }
+}
+
 class UpcomingMovieModel: Object, Decodable {
     @Persisted(primaryKey: true) var id: Int = 0
     @Persisted var title: String
@@ -15,7 +29,7 @@ class UpcomingMovieModel: Object, Decodable {
     @Persisted var voteAverage: Float
     @Persisted var posterPath: String?
     @Persisted var backdropPath: String?
-    @Persisted var movieStatus: WishListStatus? = .isWishListOff
+    @Persisted var movieStatus: WishListStatus?
     
     var imageUrl: String {
         return "https://image.tmdb.org/t/p/w500"
@@ -36,7 +50,7 @@ class PopularMovieModel: Object, Decodable {
     @Persisted var voteAverage: Float
     @Persisted var posterPath: String?
     @Persisted var backdropPath: String?
-    @Persisted var movieStatus: WishListStatus? = .isWishListOff
+    @Persisted var movieStatus: WishListStatus?
     
     var imageUrl: String {
         return "https://image.tmdb.org/t/p/w500"
