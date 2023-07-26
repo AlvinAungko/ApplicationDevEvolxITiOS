@@ -13,5 +13,6 @@ target 'ApplicationDevEvolxITiOS' do
   pod 'SVProgressHUD'
   pod 'SVPullToRefresh'
   pod 'NVActivityIndicatorView'
+  pod 'YouTubePlayer'
 
 end

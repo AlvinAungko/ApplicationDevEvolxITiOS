@@ -72,6 +72,8 @@
 		E160B43E2A70E7DC00B3DB81 /* MovieType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E160B43D2A70E7DC00B3DB81 /* MovieType.swift */; };
 		E160B4402A70E83500B3DB81 /* DatabaseUpdateService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E160B43F2A70E83500B3DB81 /* DatabaseUpdateService.swift */; };
 		E160B4432A70E8C800B3DB81 /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E160B4422A70E8C800B3DB81 /* HomeModel.swift */; };
+		E161D3BF2A714CFB008B14D5 /* VideoDisplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E161D3BD2A714CFB008B14D5 /* VideoDisplayViewController.swift */; };
+		E161D3C02A714CFB008B14D5 /* VideoDisplayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E161D3BE2A714CFB008B14D5 /* VideoDisplayViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -144,6 +146,8 @@
 		E160B43D2A70E7DC00B3DB81 /* MovieType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieType.swift; sourceTree = "<group>"; };
 		E160B43F2A70E83500B3DB81 /* DatabaseUpdateService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseUpdateService.swift; sourceTree = "<group>"; };
 		E160B4422A70E8C800B3DB81 /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
+		E161D3BD2A714CFB008B14D5 /* VideoDisplayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoDisplayViewController.swift; sourceTree = "<group>"; };
+		E161D3BE2A714CFB008B14D5 /* VideoDisplayViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VideoDisplayViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -284,6 +288,7 @@
 		E160B3FA2A70E0AB00B3DB81 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
+				E161D3BC2A714CE7008B14D5 /* Video */,
 				E11161842A70F07D0092D04F /* Detail */,
 				E160B3FF2A70E0F800B3DB81 /* Home */,
 			);
@@ -457,6 +462,15 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		E161D3BC2A714CE7008B14D5 /* Video */ = {
+			isa = PBXGroup;
+			children = (
+				E161D3BD2A714CFB008B14D5 /* VideoDisplayViewController.swift */,
+				E161D3BE2A714CFB008B14D5 /* VideoDisplayViewController.xib */,
+			);
+			path = Video;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -524,6 +538,7 @@
 				E11161A52A70F5590092D04F /* MovieCollectionViewCell.xib in Resources */,
 				E11161C42A7121440092D04F /* WatchNowTableViewCell.xib in Resources */,
 				E11161A92A70F7A80092D04F /* MovieSliderCollectionViewCell.xib in Resources */,
+				E161D3C02A714CFB008B14D5 /* VideoDisplayViewController.xib in Resources */,
 				E111619A2A70F30A0092D04F /* MovieContainerTableViewCell.xib in Resources */,
 				E11161892A70F0930092D04F /* DetailViewController.xib in Resources */,
 				E160B3F02A70DDAB00B3DB81 /* Assets.xcassets in Resources */,
@@ -622,6 +637,7 @@
 				E160B4382A70E71400B3DB81 /* BaseDialog.swift in Sources */,
 				E11161B82A7114720092D04F /* DatabaseDataRetrieveService.swift in Sources */,
 				E11161BC2A7120710092D04F /* Detail+TableView.swift in Sources */,
+				E161D3BF2A714CFB008B14D5 /* VideoDisplayViewController.swift in Sources */,
 				E160B4342A70E69700B3DB81 /* PopularMovieNetworkConfiguration.swift in Sources */,
 				E160B4062A70E13A00B3DB81 /* BaseViewController.swift in Sources */,
 				E11161D22A712AD80092D04F /* DetailMovieModel.swift in Sources */,

@@ -18,10 +18,12 @@ extension DetailViewController {
     }
     
     func playMovieTrailer(movieID: Int) {
-        
+        let vc = VideoDisplayViewController()
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     func playFullMovie(movieID: Int) {
-        
+        let vc = VideoDisplayViewController()
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 }
