@@ -8,16 +8,20 @@
 import UIKit
 import AVFoundation
 import AVKit
+import WebKit
 
 class VideoDisplayViewController: BaseViewController {
+    
+    @IBOutlet weak var webView: WKWebView!
     
     var urlValidationService: URLValidationService?
     
     override func viewDidLoad() {
+        webView.navigationDelegate = self
         super.viewDidLoad()
-        switch urlValidationService?.validateUrl(url: "https://thinkingform.com/video-sample-mp4/") {
+        switch urlValidationService?.validateUrl(url: "http://thinkingform.com/video-sample-mp4/") {
         case .isValid:
-            self.playYouTubeVideo(url: URL(string: "https://thinkingform.com/video-sample-mp4/")!)
+            self.playYouTubeVideo(url: URL(string: "http://thinkingform.com/video-sample-mp4/")!)
         case .isNotValid:
             self.showDialog(descriptionMessage: "Invalid URL")
         default:
@@ -30,17 +34,22 @@ class VideoDisplayViewController: BaseViewController {
     }
     
     func playYouTubeVideo(url: URL) {
-        let player = AVPlayer(url: url)
-        let playerViewController = AVPlayerViewController()
-        playerViewController.player = player
-        self.present(playerViewController, animated: true) {
-            player.addPeriodicTimeObserver(forInterval: CMTime(seconds: 1, preferredTimescale: 1), queue: DispatchQueue.main) { time in
-                if let error = player.error {
-                    self.showDialog(descriptionMessage: error.localizedDescription)
-                } else {
-                    playerViewController.player?.play()
-                }
-            }
+        DispatchQueue.main.async {
+            self.webView.load(URLRequest(url: url))
         }
+    }
+}
+
+extension VideoDisplayViewController: WKNavigationDelegate {
+    func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
+        self.showLoading()
+    }
+    
+    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+        self.hideLoading()
+    }
+    
+    func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error) {
+        self.showDialog(descriptionMessage: error.localizedDescription)
     }
 }
