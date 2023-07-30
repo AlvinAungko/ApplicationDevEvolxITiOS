@@ -3,7 +3,7 @@
 
 <p align="left"> <a href="https://github.com/ryo-ma/github-profile-trophy"><img src="https://github-profile-trophy.vercel.app/?username=alvinaungko" alt="alvinaungko" /></a> </p>
 
-- 🔭 I’m currently working on [EvolxIT Code Test iOS Project](https://github.com/AlvinAungko/ApplicationDevEvolxITiOS)
+- 🔭 I’m currently working on MovieDBiOS Project(https://github.com/AlvinAungko/ApplicationDevEvolxITiOS)
 
 - 🌱 I’m currently learning **iOS Mobile Development, SwiftUI, Combine, DispatchQueues, Twillio**
 
